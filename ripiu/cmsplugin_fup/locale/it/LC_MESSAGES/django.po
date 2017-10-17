@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-17 17:19+0200\n"
+"PO-Revision-Date: 2017-10-16 18:26+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.4\n"
+
+#: cmsplugin_fup/apps.py:9
+msgid "F.Ü.P. notes"
+msgstr "Note F.Ü.P. "
+
+#: cmsplugin_fup/cms_plugins.py:16 cmsplugin_fup/models.py:76
+msgid "FUP item"
+msgstr "Fuppo"
+
+#: cmsplugin_fup/cms_plugins.py:25
+msgid "Size"
+msgstr "Dimensione"
+
+#: cmsplugin_fup/cms_plugins.py:27 cmsplugin_fup/models.py:37
+msgid "Animation"
+msgstr "Animazione"
+
+#: cmsplugin_fup/cms_plugins.py:85
+msgid "FUP container"
+msgstr "Portafuppi"
+
+#: cmsplugin_fup/cms_plugins.py:94 cmsplugin_fup/models.py:107
+msgid "FUP"
+msgstr "FUP"
+
+#: cmsplugin_fup/models.py:16
+msgid "pixel"
+msgstr "pixel"
+
+#: cmsplugin_fup/models.py:17
+msgid "root em"
+msgstr "rem"
+
+#: cmsplugin_fup/models.py:21
+msgid "vw"
+msgstr "vw"
+
+#: cmsplugin_fup/models.py:22
+msgid "vh"
+msgstr "vh"
+
+#: cmsplugin_fup/models.py:30 cmsplugin_fup/models.py:82
+#: cmsplugin_fup/models.py:94
+msgid "name"
+msgstr "nome"
+
+#: cmsplugin_fup/models.py:31
+msgid "slug"
+msgstr "slug"
+
+#: cmsplugin_fup/models.py:38
+msgid "Animations"
+msgstr "Animazioni"
+
+#: cmsplugin_fup/models.py:43
+msgid "background color"
+msgstr "colore di sfondo"
+
+#: cmsplugin_fup/models.py:44
+msgid "width"
+msgstr "larghezza"
+
+#: cmsplugin_fup/models.py:46 cmsplugin_fup/models.py:51
+#: cmsplugin_fup/models.py:118 cmsplugin_fup/models.py:127
+msgid "unit"
+msgstr "unità"
+
+#: cmsplugin_fup/models.py:49
+msgid "height"
+msgstr "altezza"
+
+#: cmsplugin_fup/models.py:59
+msgid "duration (s)"
+msgstr "durata (s)"
+
+#: cmsplugin_fup/models.py:77
+msgid "FUP items"
+msgstr "Fuppi"
+
+#: cmsplugin_fup/models.py:108
+msgid "FUPs"
+msgstr "FUP"
+
+#: cmsplugin_fup/models.py:140
+msgid "FUP item position"
+msgstr "Posizione"
+
+#: cmsplugin_fup/models.py:141
+msgid "FUP item positions"
+msgstr "Posizioni"
+
+#: cmsplugin_fup/models.py:160
+msgid "Animation frame"
+msgstr "Fotogramma"
+
+#: cmsplugin_fup/models.py:161
+msgid "Animation frames"
+msgstr "Fotogrammi"

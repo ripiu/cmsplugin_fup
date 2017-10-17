@@ -1,0 +1,36 @@
+{% load cms_tags sekizai_tags %}
+{% if animation %}
+  {% addtoblock "css" %}
+    <style>
+      @keyframes {{ animation.slug }} {
+        {% for frame in animation.frames %}
+          {{ frame.percent }}% {
+            transform: translate3d({{ frame.x }}px, {{ frame.y }}px, {{ frame.z }}px);
+          }
+        {% endfor %}
+      }
+    </style>
+  {% endaddtoblock %}
+{% endif %}
+{% addtoblock "css" %}
+  <style>
+    #{{ fid }} {
+      {% if background_color %}background-color: {{ background_color }};{% endif %}
+      width: {{ width }};
+      height: {{ height }};
+      top: {{ positions.0.top }};
+      left: {{ positions.0.left }};
+    }
+    
+    #{{ fid }}.show {
+      top: {{ positions.1.top }};
+      left: {{ positions.1.left }};
+      {% if animation %}animation: {{ animation.slug }} {{ animation.duration }}s linear infinite;{% endif %}
+    }
+  </style>
+{% endaddtoblock %}
+<div class="fup-item" id="{{ fid }}">
+  {% for plugin in children %}
+    {% render_plugin plugin %}
+  {% endfor %}
+</div>

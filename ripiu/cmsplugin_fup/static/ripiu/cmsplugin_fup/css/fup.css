@@ -1,0 +1,33 @@
+mark.ripiu-fup {
+  cursor: pointer;
+  border: 1px dashed gray;
+  display: inline-block;
+  transition: all .4s ease-in-out;
+  font-size: 130%;
+}
+
+mark.ripiu-fup:hover {
+  transform: scale(2.2, 2.2);
+}
+
+.fup-item > img,
+.fup-item > video {
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
+}
+
+.fup-item {
+  position: fixed;
+  /*visibility: hidden;*/
+  pointer-events: none;
+  overflow: hidden;
+  transition: top    .3s linear,
+              right  .3s linear,
+              bottom .3s linear,
+              left   .3s linear;
+}
+
+.fup-item.show {
+  visibility: visible;
+}
