@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+0.1.1 (2017-10-19)
+------------------
+
+* Fixed an image positioning problem
+* FUPItem: it is now possible to use a decimal in width height
+
 0.1.0 (2017-10-17)
 ------------------
 

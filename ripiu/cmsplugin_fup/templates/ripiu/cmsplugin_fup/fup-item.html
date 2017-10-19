@@ -29,6 +29,14 @@
     }
   </style>
 {% endaddtoblock %}
+{% addtoblock "js" %}<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.min.js"></script>{% endaddtoblock %}
+{% addtoblock "js" %}
+  <script>
+    $(document).ready(function() {
+      objectFitImages();
+    });
+  </script>
+{% endaddtoblock %}
 <div class="fup-item" id="{{ fid }}">
   {% for plugin in children %}
     {% render_plugin plugin %}

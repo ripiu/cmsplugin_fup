@@ -41,12 +41,20 @@ class FUPItemPluginModel(CMSPlugin):
     """A FUP item is a unit inside a FUP container"""
     
     background_color = ColorField(_('background color'), null = True)
-    width = models.SmallIntegerField(_("width"), blank = True)
+    width = models.DecimalField(
+        _("width"),
+        max_digits = 5, decimal_places = 2,
+        blank = False
+    )
     width_unit = models.CharField(
         _("unit"),
         max_length = 5, choices = X_CHOICES
     )
-    height = models.SmallIntegerField(_("height"), blank = True)
+    height = models.DecimalField(
+        _("height"),
+        max_digits = 5, decimal_places = 2,
+        blank = False
+    )
     height_unit = models.CharField(
         _("unit"),
         max_length = 5, choices = Y_CHOICES

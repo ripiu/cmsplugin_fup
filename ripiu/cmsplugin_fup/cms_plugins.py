@@ -1,4 +1,5 @@
 import math
+from . import __version__
 
 from django.templatetags.static import static
 from django.template import RequestContext
@@ -40,8 +41,8 @@ class FUPItemPluginPublisher(CMSPluginBase):
         context = super(FUPItemPluginPublisher, self).render(context, instance, placeholder)
         positions = []
         for position in instance.fupitemposition_set.all():
-            x = "%f%s" % (position.x, position.x_unit)
-            y = "%f%s" % (position.y, position.y_unit)
+            x = "%.2f%s" % (position.x, position.x_unit)
+            y = "%.2f%s" % (position.y, position.y_unit)
             p = self.position(y, x)
             positions.append(p)
         frames = []
@@ -65,15 +66,15 @@ class FUPItemPluginPublisher(CMSPluginBase):
             })
             animation = {
                 'slug':     instance.animation.slug,
-                'duration': instance.animation_duration.to_eng_string(),
+                'duration': "%.2f" % instance.animation_duration,
                 'frames':   frames,
             }
         context.update({
             'fid':              "fup-item-%d" % instance.id,
             'children':         instance.child_plugin_instances,
             'background_color': instance.background_color,
-            'width':            "%d%s" % (instance.width, instance.width_unit),
-            'height':           "%d%s" % (instance.height, instance.height_unit),
+            'width':            "%.2f%s" % (instance.width, instance.width_unit),
+            'height':           "%.2f%s" % (instance.height, instance.height_unit),
             'positions':        positions,
             'animation':        animation,
         })
@@ -105,6 +106,7 @@ class FUPPluginPublisher(CMSPluginBase):
         context.update({
             'container': instance.fup_container,
             'name': instance.name,
+            'version': __version__,
         })
         return context
     
