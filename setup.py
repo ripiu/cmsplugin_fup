@@ -5,7 +5,7 @@ from ripiu.cmsplugin_fup import __version__
 setup(
     name='ripiu.cmsplugin_fup',
     version=__version__,
-    url='https://github.com/ripiu/ripiu.cmsplugin_fup',
+    url='https://github.com/ripiu/cmsplugin_fup',
     license='BSD-new',
     description='Fast Undetermined Presentation',
     long_description=open('README.rst').read(),
