@@ -1,10 +1,17 @@
-$(document).ready(function() {
-  $("mark.ripiu-fup").on("mouseover", function() {
-    var fupid = $(this).data("id")
-    $("#" + fupid + " > .fup-item").addClass("show");
-  });
-  $("mark").on("mouseout", function() {
-    var fupid = $(this).data("id")
-    $("#" + fupid + " > .fup-item").removeClass("show");
-  });
+$(function() {
+    $(".fup > input").on("change", function() {
+        if ($(this).prop("checked")) {
+            $(".fup > input").not(this).prop("checked", false);
+        } 
+    });
+    $("mark.ripiu-fup > label").on("mouseover", function(e) {
+        var radio = $("#" + $(this).attr("for"))
+        radio.prop("checked", true);
+        radio.trigger("change");
+    });
+    $("mark.ripiu-fup > label").on("mouseout", function(e) {
+        var radio = $("#" + $(this).attr("for"))
+        radio.prop("checked", false);
+        radio.trigger("change");
+    });
 });

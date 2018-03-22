@@ -26,6 +26,10 @@
               left   .3s linear;
 }
 
-.fup-item.show {
+.fup > input {
+  display: none;
+}
+
+.fup > input:checked + .fup-item {
   visibility: visible;
 }
