@@ -19,7 +19,7 @@
     left: {{ positions.0.left }};
   }
   
-  input:checked + #{{ fid }} {
+  input:checked ~ #{{ fid }} {
     top: {{ positions.1.top }};
     left: {{ positions.1.left }};
     {% if animation %}animation: {{ animation.slug }} {{ animation.duration }}s linear infinite;{% endif %}
