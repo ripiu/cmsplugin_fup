@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-17 17:19+0200\n"
+"POT-Creation-Date: 2018-04-09 16:12+0200\n"
 "PO-Revision-Date: 2017-10-16 18:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,100 +18,110 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.4\n"
 
-#: cmsplugin_fup/apps.py:9
+#: ripiu/cmsplugin_fup/apps.py:9
 msgid "F.Ü.P. notes"
 msgstr "Note F.Ü.P. "
 
-#: cmsplugin_fup/cms_plugins.py:16 cmsplugin_fup/models.py:76
+#: ripiu/cmsplugin_fup/cms_plugins.py:19 ripiu/cmsplugin_fup/models.py:113
 msgid "FUP item"
 msgstr "Fuppo"
 
-#: cmsplugin_fup/cms_plugins.py:25
+#: ripiu/cmsplugin_fup/cms_plugins.py:28
 msgid "Size"
 msgstr "Dimensione"
 
-#: cmsplugin_fup/cms_plugins.py:27 cmsplugin_fup/models.py:37
+#: ripiu/cmsplugin_fup/cms_plugins.py:33 ripiu/cmsplugin_fup/models.py:35
 msgid "Animation"
 msgstr "Animazione"
 
-#: cmsplugin_fup/cms_plugins.py:85
+#: ripiu/cmsplugin_fup/cms_plugins.py:115
 msgid "FUP container"
 msgstr "Portafuppi"
 
-#: cmsplugin_fup/cms_plugins.py:94 cmsplugin_fup/models.py:107
+#: ripiu/cmsplugin_fup/cms_plugins.py:125 ripiu/cmsplugin_fup/models.py:145
 msgid "FUP"
 msgstr "FUP"
 
-#: cmsplugin_fup/models.py:16
+#: ripiu/cmsplugin_fup/models.py:17
 msgid "pixel"
 msgstr "pixel"
 
-#: cmsplugin_fup/models.py:17
+#: ripiu/cmsplugin_fup/models.py:18
 msgid "root em"
 msgstr "rem"
 
-#: cmsplugin_fup/models.py:21
+#: ripiu/cmsplugin_fup/models.py:20
 msgid "vw"
 msgstr "vw"
 
-#: cmsplugin_fup/models.py:22
+#: ripiu/cmsplugin_fup/models.py:21
 msgid "vh"
 msgstr "vh"
 
-#: cmsplugin_fup/models.py:30 cmsplugin_fup/models.py:82
-#: cmsplugin_fup/models.py:94
+#: ripiu/cmsplugin_fup/models.py:28 ripiu/cmsplugin_fup/models.py:120
+#: ripiu/cmsplugin_fup/models.py:132
 msgid "name"
 msgstr "nome"
 
-#: cmsplugin_fup/models.py:31
+#: ripiu/cmsplugin_fup/models.py:29
 msgid "slug"
 msgstr "slug"
 
-#: cmsplugin_fup/models.py:38
+#: ripiu/cmsplugin_fup/models.py:36
 msgid "Animations"
 msgstr "Animazioni"
 
-#: cmsplugin_fup/models.py:43
+#: ripiu/cmsplugin_fup/models.py:43
 msgid "background color"
 msgstr "colore di sfondo"
 
-#: cmsplugin_fup/models.py:44
+#: ripiu/cmsplugin_fup/models.py:47
 msgid "width"
 msgstr "larghezza"
 
-#: cmsplugin_fup/models.py:46 cmsplugin_fup/models.py:51
-#: cmsplugin_fup/models.py:118 cmsplugin_fup/models.py:127
+#: ripiu/cmsplugin_fup/models.py:53 ripiu/cmsplugin_fup/models.py:64
+#: ripiu/cmsplugin_fup/models.py:75 ripiu/cmsplugin_fup/models.py:86
+#: ripiu/cmsplugin_fup/models.py:157 ripiu/cmsplugin_fup/models.py:165
 msgid "unit"
 msgstr "unità"
 
-#: cmsplugin_fup/models.py:49
+#: ripiu/cmsplugin_fup/models.py:58
+msgid "maximum width"
+msgstr "larghezza massima"
+
+#: ripiu/cmsplugin_fup/models.py:69
 msgid "height"
 msgstr "altezza"
 
-#: cmsplugin_fup/models.py:59
+#: ripiu/cmsplugin_fup/models.py:80
+#, fuzzy
+msgid "maximum height"
+msgstr "altezza massima"
+
+#: ripiu/cmsplugin_fup/models.py:96
 msgid "duration (s)"
 msgstr "durata (s)"
 
-#: cmsplugin_fup/models.py:77
+#: ripiu/cmsplugin_fup/models.py:114
 msgid "FUP items"
 msgstr "Fuppi"
 
-#: cmsplugin_fup/models.py:108
+#: ripiu/cmsplugin_fup/models.py:146
 msgid "FUPs"
 msgstr "FUP"
 
-#: cmsplugin_fup/models.py:140
+#: ripiu/cmsplugin_fup/models.py:177
 msgid "FUP item position"
 msgstr "Posizione"
 
-#: cmsplugin_fup/models.py:141
+#: ripiu/cmsplugin_fup/models.py:178
 msgid "FUP item positions"
 msgstr "Posizioni"
 
-#: cmsplugin_fup/models.py:160
+#: ripiu/cmsplugin_fup/models.py:198
 msgid "Animation frame"
 msgstr "Fotogramma"
 
-#: cmsplugin_fup/models.py:161
+#: ripiu/cmsplugin_fup/models.py:199
 msgid "Animation frames"
 msgstr "Fotogrammi"

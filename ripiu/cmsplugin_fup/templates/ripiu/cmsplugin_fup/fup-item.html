@@ -14,7 +14,9 @@
   #{{ fid }} {
     {% if background_color %}background-color: {{ background_color }};{% endif %}
     width: {{ width }};
+    {% if max_width %}max-width: {{ max_width }};{% endif %}
     height: {{ height }};
+    {% if max_height %}max-height: {{ max_height }};{% endif %}
     top: {{ positions.0.top }};
     left: {{ positions.0.left }};
   }

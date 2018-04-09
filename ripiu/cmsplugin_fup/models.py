@@ -13,17 +13,13 @@ PERCENT = '%'
 VW = 'vw'
 VH = 'vh'
 
-COMMON_UNIT_CHOICES = (
+UNIT_CHOICES = (
     (PX, _('pixel')),
     (REM, _('root em')),
     (PERCENT, '%'),
+    (VW, _('vw')),
+    (VH, _('vh')),
 )
-
-VW_CHOICE = ((VW, _('vw')),)
-VH_CHOICE = ((VH, _('vh')),)
-
-X_CHOICES = VW_CHOICE + VH_CHOICE + COMMON_UNIT_CHOICES
-Y_CHOICES = VH_CHOICE + VW_CHOICE + COMMON_UNIT_CHOICES
 
 
 class FUPItemAnimation(models.Model):
@@ -43,29 +39,59 @@ class FUPItemAnimation(models.Model):
 class FUPItemPluginModel(CMSPlugin):
     """A FUP item is a unit inside a FUP container"""
 
-    background_color = ColorField(_('background color'), null=True)
+    background_color = ColorField(
+        _('background color'), null=True
+    )
+
     width = models.DecimalField(
         _('width'),
         max_digits=5, decimal_places=2,
         blank=False
     )
+
     width_unit = models.CharField(
-        _('unit'),
-        max_length=5, choices=X_CHOICES
+        _('unit'), max_length=5,
+        choices=UNIT_CHOICES, default=PX
     )
+
+    max_width = models.DecimalField(
+        _('maximum width'),
+        max_digits=5, decimal_places=2,
+        null=True, blank=True
+    )
+
+    max_width_unit = models.CharField(
+        _('unit'), max_length=5,
+        choices=UNIT_CHOICES, default=PX
+    )
+
     height = models.DecimalField(
         _('height'),
         max_digits=5, decimal_places=2,
         blank=False
     )
+
     height_unit = models.CharField(
-        _('unit'),
-        max_length=5, choices=Y_CHOICES
+        _('unit'), max_length=5,
+        choices=UNIT_CHOICES, default=PX
     )
+
+    max_height = models.DecimalField(
+        _('maximum height'),
+        max_digits=5, decimal_places=2,
+        null=True, blank=True
+    )
+
+    max_height_unit = models.CharField(
+        _('unit'), max_length=5,
+        choices=UNIT_CHOICES, default=PX
+    )
+
     animation = models.ForeignKey(
         FUPItemAnimation, blank=True, null=True,
         on_delete=models.SET_NULL
     )
+
     animation_duration = models.DecimalField(
         _('duration (s)'),
         default=0.7,
@@ -129,7 +155,7 @@ class FUPItemPosition(models.Model):
     )
     x_unit = models.CharField(
         _('unit'),
-        max_length=5, choices=X_CHOICES
+        max_length=5, choices=UNIT_CHOICES
     )
     y = models.DecimalField(
         'y',
@@ -137,7 +163,7 @@ class FUPItemPosition(models.Model):
     )
     y_unit = models.CharField(
         _('unit'),
-        max_length=5, choices=Y_CHOICES
+        max_length=5, choices=UNIT_CHOICES
     )
     fup_item = models.ForeignKey(
         FUPItemPluginModel, blank=False, null=False,

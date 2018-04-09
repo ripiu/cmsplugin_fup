@@ -26,7 +26,10 @@ class FUPItemPluginPublisher(CMSPluginBase):
         ('', {
             'fields': ('background_color',)
         }), (_('Size'), {
-            'fields': (('width', 'width_unit'), ('height', 'height_unit'),)
+            'fields': (
+                ('width', 'width_unit', 'max_width', 'max_width_unit'),
+                ('height', 'height_unit', 'max_height', 'max_height_unit'),
+            )
         }), (_('Animation'), {
             'fields': (('animation', 'animation_duration'),)
         })
@@ -75,18 +78,34 @@ class FUPItemPluginPublisher(CMSPluginBase):
                 'frames':   frames,
             }
         context.update({
-            'fid':              'fup-item-%d' % instance.id,
-            'children':         instance.child_plugin_instances,
+            'fid': 'fup-item-%d' % instance.id,
+            'children': instance.child_plugin_instances,
             'background_color': instance.background_color,
-            'width':            '%.2f%s' % (
-                instance.width, instance.width_unit
-            ),
-            'height':           '%.2f%s' % (
-                instance.height, instance.height_unit
-            ),
-            'positions':        positions,
-            'animation':        animation,
+            'width': '%(value).2f%(unit)s' % {
+                'value': instance.width,
+                'unit': instance.width_unit,
+            },
+            'height': '%(value).2f%(unit)s' % {
+                'value': instance.height,
+                'unit': instance.height_unit,
+            },
+            'positions': positions,
+            'animation': animation,
         })
+        if instance.max_width:
+            context.update({
+                'max_width': '%(value).2f%(unit)s' % {
+                    'value': instance.max_width,
+                    'unit': instance.max_width_unit,
+                },
+            })
+        if instance.max_height:
+            context.update({
+                'max_height': '%(value).2f%(unit)s' % {
+                    'value': instance.max_height,
+                    'unit': instance.max_height_unit,
+                },
+            })
         return context
 
 
