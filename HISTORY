@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+0.2.0 (2018-4-10)
+-----------------
+
+* Added maximum width and height on FUP items
+* Fixed the tap behaviour on touch screens
+
 0.1.4 (2018-3-22)
 -----------------
 

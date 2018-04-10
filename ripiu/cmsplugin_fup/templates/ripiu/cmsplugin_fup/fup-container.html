@@ -1,6 +1,6 @@
 {% load cms_tags staticfiles sekizai_tags %}
 <div class="fup" id="{{ instance.name }}">
-  <input type="checkbox" id="{{ instance.name }}-radio">
+  <input type="radio" id="{{ instance.name }}-radio" name="ripiu-fup">
   {% for plugin in instance.child_plugin_instances %}
     {% render_plugin plugin %}
   {% endfor %}
